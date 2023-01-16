@@ -6,16 +6,22 @@ import lombok.Data;
 @Entity
 @Table(name="products")
 @Data
-public class Product {
+public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="product_code")
-    private String product_code;
+    private String productCode;
 
     @Column(name="product_name")
-    private String product_name;
+    private String productName;
 
     @Column(name="product_price")
-    private double product_price;
+    private double productPrice;
+
+    @Column(name="product_type")
+    private String productType;
+
+    @Column(name="picture")
+    private String picture;
 
 }
