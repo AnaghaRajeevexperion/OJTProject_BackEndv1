@@ -6,9 +6,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
+public interface ProductRepo{
+    List<Products> listAllProducts(String category, String sort);
 
-@CrossOrigin("*")
-@RepositoryRestResource(collectionResourceRel = "products",path="products")
-public interface ProductRepo extends JpaRepository<Products, Long> {
-    List<Products> findByproductType(String type);
 }
